@@ -1,0 +1,329 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+	background-color: #FFCCFF;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    background-color: #f2f2f2;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #ddd;
+}
+
+/* Dropdown styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Dostosowano styl przycisku "Rooms" */
+.dropdown-content a[href="#rooms"] {
+    margin-top: 5px;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.dropdown-content a[href="#rooms"]:hover {
+    background-color: #ddd;
+}
+
+/* Dodano styl dla efektu rollover dla obrazów pokoju Glasgow */
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.room-image,
+.second-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.second-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.image-container:hover .second-image {
+    opacity: 1;
+}
+
+#attractions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#attractions li {
+    flex: 0 0 calc(49% - 10px);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.attraction-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.attraction-description {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.attraction-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s; /* Dodano efekt transformacji */
+}
+
+#attractions img[src="images/balmoral-castle.jpg"],
+#attractions img[src="images/dunnottar-castle.jpg"],
+#attractions img[src="images/malt-whisky.jpg"],
+#attractions img[src="images/aberdeen-maritime.JFIF"] {
+    max-width: 20%;
+    height: auto;
+}
+
+#attractions li:hover .attraction-image {
+    transform: scale(1.1); /* Dodano efekt powiększania */
+}
+
+#attractions p {
+    margin-right: 10px;
+}
+
+#attractions h3 {
+    text-align: center;
+    width: 100%; /* Dodano, aby obejmować całą szerokość kontenera */
+    margin: 100px;
+}
+
+.facility img {
+   max-width: 100%;
+   height: 600;
+   max-height: 400px; /* Ustawiona maksymalna wysokość obrazu */
+   object-fit: cover; /* Zapewnia, że obraz nie zostanie zniekształcony */
+}
+
+
+.facility {
+   text-align: center; /* Wyśrodkowanie tekstu dla obrazków */
+}
+.facility img {
+   max-width: 100%; /* Dostosowanie szerokości obrazków do szerokości kontenera */
+   height: auto; /* Zachowanie proporcji */
+   display: block; /* Usunięcie białych przestrzeni pod obrazkami */
+   margin: 0 auto 10px; /* Wyśrodkowanie obrazków i dodanie odstępu od tekstu */
+}
+
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+
+#location {
+    text-align: center;
+    max-width: 10cm;
+    margin: 0 auto;
+}
+
+
+#glasgow-room {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: justify;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#glasgow-room h2 {
+    color: #333;
+    text-decoration: underline;
+}
+
+#glasgow-room p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+#glasgow-room .image-container {
+    margin-top: 20px;
+}
+
+#glasgow-room button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#glasgow-room button:hover {
+    background-color: #555;
+}
+
+#edinburgh-room {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: justify;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#edinburgh-room h2 {
+    color: #333;
+    text-decoration: underline;
+}
+
+#edinburgh-room p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+#edinburgh-room .image-container {
+    margin-top: 20px;
+}
+
+#edinburgh-room button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#edinburgh-room button:hover {
+    background-color: #555;
+}
+
+#aberdeen-room {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: justify;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#aberdeen-room h2 {
+    color: #333;
+    text-decoration: underline;
+}
+
+#aberdeen-room p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+#aberdeen-room .image-container {
+    margin-top: 20px;
+}
+
+#aberdeen-room button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#aberdeen-room button:hover {
+    background-color: #555;
+}
+	
+#dundee-room {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: justify;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#dundee-room h2 {
+    color: #333;
+    text-decoration: underline;
+}
+
+#dundee-room p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+#dundee-room .image-container {
+    margin-top: 20px;
+}
+
+#dundee-room button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#dundee-room button:hover {
+    background-color: #555;
+}
